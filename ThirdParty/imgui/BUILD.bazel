@@ -1,0 +1,25 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "imgui",
+    srcs = glob([
+        "*.cpp",
+        "backends/*.cpp",
+    ]),
+    hdrs = glob([
+        "*.h",
+        "backends/*.h",
+    ]),
+    include_prefix = "ThirdParty/imgui/",
+    linkopts = [
+        "-lglfw",
+        "-lGLEW",
+        "-lGLU",
+        "-lGL",
+        "-lglut",
+        "-lsfml-graphics",
+        "-lsfml-window",
+        "-lsfml-system",
+    ],
+    visibility = ["//visibility:public"],
+)

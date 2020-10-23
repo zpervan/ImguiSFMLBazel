@@ -1,0 +1,7 @@
+# Build folders
+**/*build*/
+**/bazel-*
+
+# Settings files
+**/.clwb
+**/.idea
